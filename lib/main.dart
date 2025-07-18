@@ -12,7 +12,7 @@ class DrawPocApplication extends StatefulWidget {
 }
 
 class _DrawPocApplicationState extends State<DrawPocApplication> {
-  bool isEraser = false;
+  // bool isEraser = false;
   bool _isVisible = false;
   bool _isPallete = false;
   double _width = 2.0;
