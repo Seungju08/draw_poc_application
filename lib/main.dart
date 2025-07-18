@@ -263,7 +263,7 @@ class _DrawPocApplicationState extends State<DrawPocApplication> {
                         label: _width.toStringAsFixed(1),
                         activeColor: selectedColor,
                         min: 0.1,
-                        max: 10,
+                        max: 40,
                       ),
                     ),
                     SizedBox(height: 20),
@@ -378,9 +378,7 @@ class _DrawPocApplicationState extends State<DrawPocApplication> {
               duration: Duration(milliseconds: 300),
               offset: _isPallete ? Offset(0, 0) : Offset(0, -2),
               child: GestureDetector(
-                onTap: () {
-                  colorPicker(Colors.red);
-                },
+                onTap: () => setState(() => selectedColor = Colors.red),
                 child: Container(
                   width: 40,
                   height: 40,
@@ -400,9 +398,7 @@ class _DrawPocApplicationState extends State<DrawPocApplication> {
               duration: Duration(milliseconds: 300),
               offset: _isPallete ? Offset(0, 0) : Offset(0, -3.2),
               child: GestureDetector(
-                onTap: () {
-                  colorPicker(Colors.blue);
-                },
+                onTap: () => setState(() => selectedColor = Colors.blue),
                 child: Container(
                   width: 40,
                   height: 40,
@@ -422,11 +418,7 @@ class _DrawPocApplicationState extends State<DrawPocApplication> {
               duration: Duration(milliseconds: 300),
               offset: _isPallete ? Offset(0, 0) : Offset(0, -4.4),
               child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedColor == Colors.green;
-                  });
-                },
+                onTap: () => setState(() => selectedColor = Colors.green),
                 child: Container(
                   width: 40,
                   height: 40,
@@ -482,7 +474,7 @@ class _DrawPocApplicationState extends State<DrawPocApplication> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    colorPicker(Colors.white);
+                    selectedColor = Colors.white;
                     // isEraser = true;
                   });
                 },
